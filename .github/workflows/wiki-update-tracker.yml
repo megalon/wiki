@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: Skip Tracking Steps?
         if: env.ENABLE != '1ENABLED'
-        run: echo ENABLE_WUT Secret not set to 1ENABLED, skipping page tracking... 
+        run: echo ENABLE_WUT Secret not set to 1ENABLED, skipping page tracking...
 
       - name: Checkout git repository
         if: env.ENABLE == '1ENABLED'
@@ -39,6 +39,7 @@ jobs:
           original: "wiki"
           translations: |-
             fr:wiki/fr
+            de:wiki/de
           filters: "**/*"
           ignores: |-
             wiki/LICENSE
@@ -60,4 +61,4 @@ jobs:
           project-card-uptodate-template: .github/workflows/wut-templates/project-uptodate-template.md
           project-card-orphan-template: .github/workflows/wut-templates/project-orphan-template.md
     env:
-        ENABLE: ${{ secrets.ENABLE_WUT }}
+      ENABLE: ${{ secrets.ENABLE_WUT }}
