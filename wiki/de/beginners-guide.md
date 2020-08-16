@@ -1,6 +1,3 @@
----
-translation-done: false
----
 ::: danger
 Sorry, this page has not been translated yet, you can either:
 - refer to the [original English version](<../beginners-guide.md>),
